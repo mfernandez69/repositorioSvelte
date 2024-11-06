@@ -5,12 +5,12 @@ function changeColor(){
     let contador = 0;
     let colores = ["red", "green", "purple", "orange"];
 
-    if(contador > colores.length){
+    if(contador >= colores.length){
         contador = 0;
     }
     else{
         contador++;
-        document.getElementById('boton').style.backgroundColor = colores[contador];
+        boton.style.backgroundColor = colores[contador];
     }
 
 boton.addEventListener('click', changeColor);
