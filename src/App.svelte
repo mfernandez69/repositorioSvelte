@@ -2,7 +2,8 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
-  import TamanoImagen from './lib/TamanoImagen.svelte';
+  
+  import TamanoImagen from './lib/TamanoImagen.svelte'
 </script>
 
 <main>
@@ -15,10 +16,10 @@
     </a>
   </div>
   <h1>Vite + Svelte</h1>
-
   <div class="card">
     <Counter />
   </div>
+
   <div class="btnColor">
     <TamanoImagen />
   </div>
