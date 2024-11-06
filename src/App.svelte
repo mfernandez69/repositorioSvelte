@@ -2,6 +2,7 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+  import ColorBoton from './lib/ColorBoton.svelte';
 </script>
 
 <main>
@@ -17,6 +18,9 @@
 
   <div class="card">
     <Counter />
+  </div>
+  <div class="btnColor">
+    <ColorBoton />
   </div>
 
   <p>
