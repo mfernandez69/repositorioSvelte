@@ -1,20 +1,20 @@
 <script>
 
 let contador = 0;
+let boton = document.getElementById('boton');
+
+boton.addEventListener('click', changeColor);
 
 function changeColor(){
-    let boton = document.getElementById('boton');
+    
     let colores = ["red", "green", "purple", "orange"];
 
     if(contador >= colores.length){
         contador = 0;
     }
-    else{
-        contador++;
-        boton.style.backgroundColor = colores[contador];
-    }
-
-boton.addEventListener('click', changeColor);
+    
+    contador++;
+    boton.style.backgroundColor = colores[contador];
 
 }
 

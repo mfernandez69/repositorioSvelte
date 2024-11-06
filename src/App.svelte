@@ -2,7 +2,7 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
-  import ColorBoton from './lib/ColorBoton.svelte';
+  import TamanoImagen from './lib/TamanoImagen.svelte';
 </script>
 
 <main>
@@ -20,7 +20,7 @@
     <Counter />
   </div>
   <div class="btnColor">
-    <ColorBoton />
+    <TamanoImagen />
   </div>
 
   <p>
