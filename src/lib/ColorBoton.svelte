@@ -1,8 +1,9 @@
 <script>
 
+let contador = 0;
+
 function changeColor(){
     let boton = document.getElementById('boton');
-    let contador = 0;
     let colores = ["red", "green", "purple", "orange"];
 
     if(contador >= colores.length){
