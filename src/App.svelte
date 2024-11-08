@@ -2,8 +2,8 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
-  
   import TamanoImagen from './lib/TamanoImagen.svelte'
+  import GeneradorContrasenas from './lib/PasswordGenerator.svelte'
 </script>
 
 <main>
@@ -24,6 +24,9 @@
     <TamanoImagen />
   </div>
 
+  <div class="divGenerardorContrasena">
+    <GeneradorContrasenas />
+  </div>
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
   </p>
