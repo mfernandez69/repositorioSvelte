@@ -66,19 +66,27 @@
   
   <style>
     :root {
-      --primary-color: #3498db;
-      --secondary-color: #2980b9;
-      --background-color: #f5f5f5;
-      --text-color: #333;
+      --background-color: #121212;
+      --card-background: #1e1e1e;
+      --primary-color: #bb86fc;
+      --secondary-color: #3700b3;
+      --text-color: #e0e0e0;
+      --input-background: #2c2c2c;
+      --input-border: #444;
+    }
+  
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
     }
   
     .password-generator {
       max-width: 400px;
       margin: 2rem auto;
       padding: 2rem;
-      background-color: white;
+      background-color: var(--card-background);
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
   
     h2 {
@@ -104,8 +112,10 @@
       width: 60px;
       padding: 0.3rem;
       margin-left: 0.5rem;
-      border: 1px solid #ccc;
+      background-color: var(--input-background);
+      border: 1px solid var(--input-border);
       border-radius: 4px;
+      color: var(--text-color);
     }
   
     input[type="checkbox"] {
@@ -136,24 +146,26 @@
     .password-display input {
       flex-grow: 1;
       padding: 0.8rem;
-      border: 1px solid #ccc;
+      background-color: var(--input-background);
+      border: 1px solid var(--input-border);
       border-radius: 5px;
       font-size: 1rem;
+      color: var(--text-color);
     }
   
     
   
-    @media (max-width: 480px) {
-      .password-generator {
-        padding: 1.5rem;
-      }
+     @media (max-width: 480px) {
+       .password-generator {
+         padding: 1.5rem; 
+       }
   
-      .password-display {
-        flex-direction: column;
-      }
+       .password-display {
+         flex-direction: column; 
+       }
   
-      .copy-btn {
-        margin-top: 0.5rem;
-      }
-    }
+       .copy-btn {
+         margin-top: 0.5rem; 
+       }
+     }
   </style>
