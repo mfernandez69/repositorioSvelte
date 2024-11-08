@@ -35,61 +35,125 @@
     
     <div class="options">
       <label>
+        <span>Longitud:</span>
         <input type="number" bind:value={length} min="4" max="32">
-        Longitud
       </label>
       <label>
         <input type="checkbox" bind:checked={includeLowercase}>
-        Minúsculas
+        <span>Minúsculas</span>
       </label>
       <label>
         <input type="checkbox" bind:checked={includeUppercase}>
-        Mayúsculas
+        <span>Mayúsculas</span>
       </label>
       <label>
         <input type="checkbox" bind:checked={includeNumbers}>
-        Números
+        <span>Números</span>
       </label>
       <label>
         <input type="checkbox" bind:checked={includeSymbols}>
-        Símbolos
+        <span>Símbolos</span>
       </label>
     </div>
   
-    <button on:click={generatePassword}>Generar Contraseña</button>
+    <button class="generate-btn" on:click={generatePassword}>Generar Contraseña</button>
     
     <div class="password-display">
-      <input type="text" readonly value={password}>
-      <button on:click={copyToClipboard}>Copiar</button>
+      <input type="text" value={password} readonly>
+      <button class="copy-btn" on:click={copyToClipboard}>Copiar</button>
     </div>
   </div>
   
   <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2980b9;
+      --background-color: #f5f5f5;
+      --text-color: #333;
+    }
+  
     .password-generator {
       max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    h2 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
   
     .options {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15px;
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
     }
   
-    .options label {
-      margin-bottom: 5px;
+    label {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+  
+    input[type="number"] {
+      width: 60px;
+      padding: 0.3rem;
+      margin-left: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+  
+    .generate-btn, .copy-btn {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .generate-btn:hover, .copy-btn:hover {
+      background-color: var(--secondary-color);
     }
   
     .password-display {
       display: flex;
-      margin-top: 15px;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
     }
   
     .password-display input {
       flex-grow: 1;
-      margin-right: 10px;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+  
+    
+  
+    @media (max-width: 480px) {
+      .password-generator {
+        padding: 1.5rem;
+      }
+  
+      .password-display {
+        flex-direction: column;
+      }
+  
+      .copy-btn {
+        margin-top: 0.5rem;
+      }
     }
   </style>
