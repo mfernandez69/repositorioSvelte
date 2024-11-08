@@ -1,10 +1,13 @@
 <script>
+// @ts-nocheck
+
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
   import TamanoImagen from './lib/TamanoImagen.svelte'
   import SliderImagenes from './lib/SliderImagenes.svelte'
   import GeneradorContrasenas from './lib/PasswordGenerator.svelte'
+  import LoadingBtn from './lib/LoadingBtn.svelte'
 </script>
 
 <main>
@@ -25,6 +28,10 @@
     <TamanoImagen />
   </div>
 
+  <div class="loadingBtn">
+    <LoadingBtn/>
+  </div>
+
   <SliderImagenes />
 
   <div class="divGenerardorContrasena">
@@ -37,6 +44,10 @@
   <p class="read-the-docs">
     Click on the Vite and Svelte logos to learn more
   </p>
+  
+  <div class="loadingBtn">
+    <LoadingBtn text="Cargar datos" loadingText="Cargando..." />
+  </div>
 </main>
 
 <style>
