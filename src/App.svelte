@@ -3,6 +3,7 @@
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
   import TamanoImagen from './lib/TamanoImagen.svelte'
+  import SliderImagenes from './lib/SliderImagenes.svelte'
   import GeneradorContrasenas from './lib/PasswordGenerator.svelte'
 </script>
 
@@ -23,6 +24,8 @@
   <div class="btnColor">
     <TamanoImagen />
   </div>
+
+  <SliderImagenes />
 
   <div class="divGenerardorContrasena">
     <GeneradorContrasenas />
